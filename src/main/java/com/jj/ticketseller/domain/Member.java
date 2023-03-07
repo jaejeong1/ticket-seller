@@ -16,6 +16,9 @@ public class Member {
     @Column(unique = true)
     private String name;
 
+    @Embedded
+    private Address address;
+
     @OneToMany(mappedBy = "member")
     private List<Reservation> reservations = new ArrayList<>();
 }
