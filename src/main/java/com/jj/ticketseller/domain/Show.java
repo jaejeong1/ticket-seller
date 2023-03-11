@@ -3,6 +3,7 @@ package com.jj.ticketseller.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 
 
@@ -16,4 +17,6 @@ public class Show {
 
     private Integer price;
 
+    @OneToOne(mappedBy = "show")
+    private Wait wait;
 }
